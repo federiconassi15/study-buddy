@@ -1,6 +1,6 @@
 # Study Buddy v0.1.1-BETA
 
-**Note:** For now, there is only a Linux version and a Windows version. A macOS version may come in the future, but it's not confirmed yet.
+**Note:** For now, there is only a **Linux** **version** and a **Windows** **version**. A **macOS** **version** may come in the future, but it's not confirmed yet.
 
 ## Current Versions
 
