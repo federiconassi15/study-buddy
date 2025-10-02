@@ -1,86 +1,57 @@
-# 📚 Study Buddy v0.1.1-BETA
+# Study Buddy v0.1.1-BETA
 
-Study Buddy is a terminal-based study helper with a large question bank (~800+ questions auto-expanded).  
-This is the **v0.1.1-BETA release**.
+**Note:** For now, there is only a Linux version and a Windows version. A macOS version may come in the future, but it's not confirmed yet.
 
-⚠️ **Note:**  
-Currently, only a **Linux version** is available.  
-A **Windows version** is in the works, and a possible **macOS version** may come later.
+## Current Versions
 
----
-
-## 🚀 How to Run (Linux)
-
-1. **Download the latest release** from this repository.
-2. Extract the files (you should have two items):
-   - `study-buddy-v0.1.1-BETA` (the executable)
-   - `StudyBuddyLauncher.desktop` (the launcher file)
+- Linux: `study-buddy-v0.1.1-BETA-linux`  
+- Windows: `study-buddy-v0.1.1-BETA-x86_64bit.exe`
 
 ---
 
-### 🔧 Important Notes About the `.desktop` File
+## Linux Installation
 
-- The launcher **must be named with the `.desktop` extension**, for example:
-  ```
-  StudyBuddyLauncher.desktop
-  ```
-- Do **NOT** save it as `.txt` (e.g. `StudyBuddyLauncher.txt`) — otherwise your desktop environment won’t recognize it as an application.
+1. Download `study-buddy-v0.1.1-BETA-linux` and place it in a folder of your choice.  
+2. Create a `.desktop` file (plain text) on your Desktop (or wherever you want). Example:
 
----
-
-### ⚙️ Editing the `.desktop` File
-
-1. Open `StudyBuddyLauncher.desktop` in a text editor.  
-   You’ll see a line like this:
-
-   ```ini
-   Exec=/your/path/to/study-buddy-v0.1.1-BETA
-   ```
-
-2. Change `/your/path/to/` to the **full path** of where you extracted the program.  
-   For example, if you put it in `~/Desktop/StudyBuddy/`, then update it to:
-
-   ```ini
-   Exec=/home/yourusername/Desktop/StudyBuddy/study-buddy-v0.1.1-BETA
-   ```
-
----
-
-### 🖥️ Making the `.desktop` File Executable
-
-Run the following command in your terminal:
-
-```bash
-chmod +x /path/to/StudyBuddyLauncher.desktop
+```ini
+[Desktop Entry]
+Type=Application
+Name=Study Buddy
+Exec=/your/path/to/study-buddy-v0.1.1-BETA-linux
+Icon=study-buddy
+Terminal=true
+Categories=Education;
 ```
 
-Example (if it’s on your Desktop):
+3. **Important:** Change the `Exec=` line to the **full path** where you placed the Linux executable. For example:
 
-```bash
-chmod +x ~/Desktop/StudyBuddyLauncher.desktop
+```ini
+Exec=/home/yourusername/Downloads/study-buddy-v0.1.1-BETA-linux
 ```
 
----
-
-## 🎮 Running the Program
-
-- Double-click `StudyBuddyLauncher.desktop` in your file manager (e.g. Dolphin, Nautilus).
-- Or run directly from the terminal:
+4. Make the `.desktop` file executable:
 
 ```bash
-./study-buddy-v0.1.1-BETA
+chmod +x /path/to/study-buddy-v0.1.1-BETA-linux.desktop
 ```
 
----
-
-## 📌 Current Roadmap
-
-- [x] Linux binary (v0.1.1-BETA)
-- [ ] Windows build (working on it)
-- [ ] macOS build (maybe, if I get access to a mac or vm)
+5. You can now double-click the `.desktop` file to run the application.
 
 ---
 
-## 📝 License
+## Windows Installation
 
-This project is still in **beta**. License to be decided later.
+1. Download `study-buddy-v0.1.1-BETA-x86_64bit.exe`.  
+2. Double-click the `.exe` file to run it.  
+3. (Optional) Create a shortcut on your Desktop for easy access.
+
+---
+
+## Notes
+
+- Linux users must have the executable permission set and correct paths in the `.desktop` file.  
+- Windows users can run the `.exe` directly; no additional configuration is needed.  
+- This is a BETA version; expect possible bugs or missing features.  
+- Future releases may include macOS support.
+
