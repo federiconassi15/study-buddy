@@ -4,21 +4,21 @@
 
 ## Current Versions
 
-- Linux: `study-buddy-v0.1.1-BETA-linux`  
+- Linux: `study-buddy-v0.1.1-BETA`  
 - Windows: `study-buddy-v0.1.1-BETA-x86_64bit.exe`
 
 ---
 
 ## Linux Installation
 
-1. Download `study-buddy-v0.1.1-BETA-linux` and place it in a folder of your choice.  
+1. Download `study-buddy-v0.1.1-BETA` and place it in a folder of your choice.  
 2. Create a `.desktop` file (plain text) on your Desktop (or wherever you want). Example:
 
 ```ini
 [Desktop Entry]
 Type=Application
 Name=Study Buddy
-Exec=/your/path/to/study-buddy-v0.1.1-BETA-linux
+Exec=/your/path/to/study-buddy-v0.1.1-BETA
 Icon=study-buddy
 Terminal=true
 Categories=Education;
@@ -27,13 +27,13 @@ Categories=Education;
 3. **Important:** Change the `Exec=` line to the **full path** where you placed the Linux executable. For example:
 
 ```ini
-Exec=/home/yourusername/Downloads/study-buddy-v0.1.1-BETA-linux
+Exec=/home/yourusername/Downloads/study-buddy-v0.1.1-BETA
 ```
 
 4. Make the `.desktop` file executable:
 
 ```bash
-chmod +x /path/to/study-buddy-v0.1.1-BETA-linux.desktop
+chmod +x /path/to/study-buddy-v0.1.1-BETA.desktop
 ```
 
 5. You can now double-click the `.desktop` file to run the application.
