@@ -76,8 +76,8 @@ chmod +x ~/Desktop/study-buddy.desktop
 ## 📌 Current Roadmap
 
 - [x] Linux binary (v0.1.1-BETA)
-- [ ] Windows build (coming soon)
-- [ ] macOS build (maybe, not sure yet)
+- [ ] Windows build (working on it)
+- [ ] macOS build (maybe, if I get access to a mac or vm)
 
 ---
 
