@@ -14,7 +14,7 @@ A **Windows version** is in the works, and a possible **macOS version** may come
 1. **Download the latest release** from this repository.
 2. Extract the files (you should have two items):
    - `study-buddy-v0.1.1-BETA` (the executable)
-   - `study-buddy.desktop` (the launcher file)
+   - `StudyBuddyLauncher.desktop` (the launcher file)
 
 ---
 
@@ -22,15 +22,15 @@ A **Windows version** is in the works, and a possible **macOS version** may come
 
 - The launcher **must be named with the `.desktop` extension**, for example:
   ```
-  study-buddy.desktop
+  StudyBuddyLauncher.desktop
   ```
-- Do **NOT** save it as `.txt` (e.g. `study-buddy.txt`) — otherwise your desktop environment won’t recognize it as an application.
+- Do **NOT** save it as `.txt` (e.g. `StudyBuddyLauncher.txt`) — otherwise your desktop environment won’t recognize it as an application.
 
 ---
 
 ### ⚙️ Editing the `.desktop` File
 
-1. Open `study-buddy.desktop` in a text editor.  
+1. Open `StudyBuddyLauncher.desktop` in a text editor.  
    You’ll see a line like this:
 
    ```ini
@@ -51,20 +51,20 @@ A **Windows version** is in the works, and a possible **macOS version** may come
 Run the following command in your terminal:
 
 ```bash
-chmod +x /path/to/study-buddy.desktop
+chmod +x /path/to/StudyBuddyLauncher.desktop
 ```
 
 Example (if it’s on your Desktop):
 
 ```bash
-chmod +x ~/Desktop/study-buddy.desktop
+chmod +x ~/Desktop/StudyBuddyLauncher.desktop
 ```
 
 ---
 
 ## 🎮 Running the Program
 
-- Double-click `study-buddy.desktop` in your file manager (e.g. Dolphin, Nautilus).
+- Double-click `StudyBuddyLauncher.desktop` in your file manager (e.g. Dolphin, Nautilus).
 - Or run directly from the terminal:
 
 ```bash
