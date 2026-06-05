@@ -1,57 +1,93 @@
-# Study Buddy v0.1.1-BETA
+# Study Buddy v0.2.0-BETA
 
-**Note:** For now, there is only a **Linux** **version** and a **Windows** **version**. A **macOS** **version** may come in the future, but it's not confirmed yet.
-
-## Current Versions
-
-- Linux: `study-buddy-v0.1.1-BETA-linux`  
-- Windows: `study-buddy-v0.1.1-BETA-x86_64bit.exe`
+A quiz tool + AI-powered Anki flashcard generator.
+Works on Windows, Linux, and macOS.
 
 ---
 
-## Linux Installation
-
-1. Download `study-buddy-v0.1.1-BETA-linux` and place it in a folder of your choice.  
-2. Create a `.desktop` file (plain text) on your Desktop (or wherever you want). Example:
-
-```ini
-[Desktop Entry]
-Type=Application
-Name=Study Buddy
-Exec=/your/path/to/study-buddy-v0.1.1-BETA-linux
-Icon=study-buddy
-Terminal=true
-Categories=Education;
-```
-
-3. **Important:** Change the `Exec=` line to the **full path** where you placed the Linux executable. For example:
-
-```ini
-Exec=/home/yourusername/Downloads/study-buddy-v0.1.1-BETA-linux
-```
-
-4. Make the `.desktop` file executable:
+## Setup
 
 ```bash
-chmod +x /path/to/study-buddy-v0.1.1-BETA.desktop-linux
+pip install -r requirements.txt
+python study_buddy.py
 ```
 
-5. You can now double-click the `.desktop` file to run the application.
+---
+
+## Features
+
+**Quiz Mode**
+- Load your own question banks (JSON or CSV)
+- Filter by topic, set question count, shuffle
+- Self-grade each card with live score tracking
+
+**Flashcard Generator**
+- Paste notes and/or load a question bank
+- AI generates Anki-compatible flashcards
+- Export as `.apkg` (direct Anki import), `.csv`, or `.txt`
+
+**Settings**
+- Groq — free tier at console.groq.com
+- OpenRouter — keys at openrouter.ai/keys
+- Settings saved to `~/.studybuddy_config.json`
 
 ---
 
-## Windows Installation
+## Question Bank Format
 
-1. Download `study-buddy-v0.1.1-BETA-x86_64bit.exe`.  
-2. Double-click the `.exe` file to run it.  
-3. (Optional) Create a shortcut on your Desktop for easy access.
+JSON (list):
+```json
+[
+  {"question": "What is the powerhouse of the cell?", "answer": "Mitochondria", "topic": "Biology"},
+  {"question": "What is Newton's 2nd law?", "answer": "F = ma", "topic": "Physics"}
+]
+```
+
+JSON (dict by topic):
+```json
+{
+  "Biology": [
+    {"question": "What is the powerhouse of the cell?", "answer": "Mitochondria"}
+  ]
+}
+```
+
+CSV:
+```
+question,answer,topic
+What is the powerhouse of the cell?,Mitochondria,Biology
+```
+
+Column aliases: `question` / `q` / `front` — `answer` / `a` / `back` — `topic` / `category` / `deck`
 
 ---
 
-## Notes
+## Packaging
 
-- Linux users must have the executable permission set and correct paths in the `.desktop` file.  
-- Windows users can run the `.exe` directly; no additional configuration is needed.  
-- This is a BETA version; expect possible bugs or missing features.  
-- Future releases may include macOS support.
+```bash
+pip install pyinstaller
 
+# Windows
+pyinstaller --windowed --onefile --name "Study Buddy" study_buddy.py
+
+# macOS
+pyinstaller --windowed --onefile --name "Study Buddy" study_buddy.py
+
+# Linux
+pyinstaller --onefile --name "study-buddy" study_buddy.py
+```
+
+---
+
+## Changelog
+
+### v0.2.0-BETA
+- Full PyQt6 GUI rewrite
+- AI flashcard generation via Groq and OpenRouter
+- Anki `.apkg` export
+- Custom question bank loading (JSON + CSV)
+- macOS support
+
+### v0.1.1-BETA
+- Terminal-based quiz app
+- Windows and Linux only
